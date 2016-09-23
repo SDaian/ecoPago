@@ -1,0 +1,41 @@
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Registro Paso 2</h3>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="margin2 padding2">
+                <div class="parentflex-center">
+                    <div class="flexchild fullwidth margin1">
+                        <div class="panel nomargin fullwidth">
+                            <div class="panel-heading">
+                                <span>1) Agregue un punto de venta para comenzar a operar.</span>
+                            </div>
+                            <div class="panel-body panel-seccion puntov padding2 margin1">
+                                <i class="icon-carrito"></i>
+                                <span class="padding2">Generar Punto de Venta AFIP</span>
+                            </div>
+                            <div class="margin1">
+                                <button ui-sref="app.reghead.crearPuntoVenta" class="btn btn-primary btn-block" ng-click="">Generar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexchild fullwidth margin1">
+                        <div class="panel nomargin fullwidth">
+                            <div class="panel-heading">
+                                <span>2) Cargue su número de cuenta para recibir pagos.</span>
+                            </div>
+                            <div class="panel-body panel-seccion cuenta padding2 margin1">
+                                <i class="icon-credit-card"></i>
+                                <span class="padding2">Agregar Cuenta</span>
+                            </div>
+                            <div class="margin1">
+                                <button ui-sref="app.reghead.agregarCuenta" class="btn btn-success btn-block" ng-click="">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Registrar Empresa</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Cargando...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="registro-content padding2">
+                <div class="panel panel-default fullwidth nomargin marginbot1">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Complete los datos de su empresa</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="razonSocial" class="control-label col-sm-3">Razón Social</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="razonSocial" ng-model="data.usuario.razonSocial" placeholder="Ej: Los Molinos S.R.L.">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginCuit" class="control-label col-sm-3">CUIT</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="loginDni" ng-model="data.usuario.cuit" placeholder="Numero de CUIT">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="eMail" class=" control-label col-sm-3">E-Mail</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="eMail" ng-model="data.usuario.mail" placeholder="Correo electronico">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reEMail" class="control-label col-sm-3">E-Mail</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="reEMail" ng-model="data.usuario.verifMail" placeholder="Repita su correo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginPassword" class=" control-label col-sm-3">Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="loginPassword" ng-model="data.usuario.password" placeholder="Ingrese su password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rePassword" class="control-label col-sm-3">Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="rePassword" ng-model="data.usuario.verifPassword" placeholder="Repita su password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--corte formulario-->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-3">Calle y Numero</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="callenro" ng-model="data.usuario.domicilio" placeholder="Ej: San Martin 1201">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-3">Localidad</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control"  ng-model="data.usuario.localidad" placeholder="Localidad de la empresa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-3">Codigo Postal</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="cp" ng-model="data.usuario.codigoPostal" placeholder="Ej: 1842">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-3">Provincia</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" ng-model="data.usuario.provincia">
+                                                <option value="buenosAires" selected>Buenos Aires</option>
+                                                <option value="ciudadBuenosAires">Ciudad de Buenos Aires</option>
+                                                <option value="catamarca">Catamarca</option>
+                                                <option value="chaco">Chaco</option>
+                                                <option value="chubut">Chubut</option>
+                                                <option value="cordoba">Córdoba</option>
+                                                <option value="corrientes">Corrientes</option>
+                                                <option value="entreRios">Entre Rios</option>
+                                                <option value="formosa">Formosa</option>
+                                                <option value="jujuy">Jujuy</option>
+                                                <option value="laPampa">La Pampa</option>
+                                                <option value="laRioja">La Rioja</option>
+                                                <option value="mendoza">Mendoza</option>
+                                                <option value="misiones">Misiones</option>
+                                                <option value="neuquen">Neuquén</option>
+                                                <option value="rioNegro">Rio Negro</option>
+                                                <option value="salta">Salta</option>
+                                                <option value="sanJuan">San Juan</option>
+                                                <option value="sanLuis">San Luis</option>
+                                                <option value="santaCruz">Santa Cruz</option>
+                                                <option value="santaFe">Santa Fe</option>
+                                                <option value="santiagoEstero">Santiago del Estero</option>
+                                                <option value="tierraFuego">Tierra del Fuego</option>
+                                                <option value="tucuman">Tucumán</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono" class="control-label col-sm-3">Teléfono</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="telefono" ng-model="data.usuario.celular" placeholder="Ej: (+54 11) 5260-2500 ">
+                                        </div>
+                                    </div>
+                                    <div ng-show="showLoginError" class="error">Los datos ingresados son incorrectos.</div>
+                                    <div ng-show="showValidationError" class="error">Ingrese CUIT y contrase&ntildea</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a href="" class="btn btn-primary btn-block width50 marginauto" ng-click="crearVendedor()">Continuar</a>
+            </div>
+        </div>
+    </div>
+</div>

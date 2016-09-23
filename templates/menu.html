@@ -1,0 +1,51 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <img src="img/logo_ecopago_color.jpg" style="width: 91px">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <span class="user-info ">
+          <h5>Pepe Sanchez</h5>
+          <!-- <button><p class="ion-arrow-down-b"> Vendedor</p></button> -->
+          <label class="item item-input item-select">
+            <select>
+              <option selected>Vendedor Master</option>
+              <option>Sucursal 1</option>
+              <option>Sucursal 2</option>
+            </select>
+          </label>
+        </span>
+        <img class="avatar-log" src="img/avatar.jpg">
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/search">
+          Mi cuenta
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          Nueva venta
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Contabilidad
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Sucursales
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

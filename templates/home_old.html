@@ -1,0 +1,81 @@
+
+<div ui-view>
+  <ion-content class="scroll-content-flat" has-bouncing="false">
+
+    <div class="row">
+      <div class="col col-nuevoPago">
+
+        <ion-list class="col-pagos">
+          <div class="bar bar-header bar-light fixed-bar">
+            <h1 class="title">Nuevo Pago</h1>
+          </div>
+          <label class="item item-input">
+            <input type="text" placeholder="Cuit / Dni" ng-model="venta.dniComprador">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Importe" ng-model="venta.montoTotal">
+          </label>
+          <label class="item item-input">
+            <textarea placeholder="Comments" ng-model="venta.descripcion"></textarea>
+          </label>
+          <span class="error" ng-show="showError">Ingrese un CUIT y monto v&aacutelidos</span>
+          <span class="okMessage" ng-show="showOk">Venta Creada</span>
+          <button class="button button-dark button-outline button-full" ng-click="crearVenta()">Cobrar</button>
+        </ion-list>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col" style="display: none;">
+        <ion-list class="col-scroll">
+          <div class="bar bar-header bar-light fixed-bar">
+            <h1 class="title">Mis sucursales</h1>
+          </div>
+
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-eye"></i>
+            Coto - La Plata
+            <span class="badge badge-balanced">$40.000</span>
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-eye"></i>
+            Coto - Buenos Aires
+            <span class="badge badge-balanced">$50.000</span>
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-eye"></i>
+            Coto - Microcentro
+            <span class="badge badge-balanced">$400.000</span>
+          </a>
+
+        </ion-list>
+      </div>
+
+      <div class="col col-ventas">
+
+        <ion-list>
+          <div class="bar bar-header bar-light fixed-bar">
+            <h1 class="title">Mis ventas recientes</h1>
+          </div>
+          <button class="button button-clear button-dark right" ng-click="getVentas()"><i class="ion-refresh"></i></button>
+          <ion-item ng-repeat="venta in ventas" class="item-thumbnail-left">
+            {{getEstadoVenta(venta)}}
+            <a class="item item-icon-left" href="#">
+              <i class="icon icon-local-service"></i>
+              {{venta.descripcion}}
+              <p>Acá iría la fecha de la venta</p>
+              <span class="badge {{badgeColor}}">${{venta.montoTotal}}<i class="icon ion-close {{closeIconColor}}"></i></span>
+            </a>
+          </ion-item>
+
+
+
+        </ion-list>
+
+      </div>
+
+
+    </div>
+
+  </ion-content>
+</div>

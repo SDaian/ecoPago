@@ -1,0 +1,62 @@
+<div ui-view class="background-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 login-content">
+                <img class="center-block" src="/img/logo-ecopago.png">
+                <div class="parentflex-stretch margin1">
+                    <div class="flexchild2">
+                        <div class="panel panel-default fullwidth">
+                            <div class="panel-heading">
+                                <h3 class="panel-title bold">Ya tengo cuenta</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="loginCUIT" class="col-sm-3 control-label">CUIT</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="loginCUIT" ng-model="loginData.dni" placeholder="Ingrese su numero de CUIT">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginEMail" class="col-sm-3 control-label">E-Mail</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="form-control" id="loginEMail" ng-model="loginData.mail" placeholder="Ingrese su correo electrónico">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginPassword" class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="loginPassword" ng-model="loginData.password" placeholder="Ingrese su password">
+                                        </div>
+                                    </div>
+                                    <a ui-sref="recuperacionPassword">
+                                    <!-- <a href="#" ng-click="generarToken()"> -->
+                                        <p class="dark">¿Olvidaste tu contraseña?</p>
+                                    </a>
+                                    <div ng-show="showLoginError" class="error">Los datos ingresados son incorrectos.</div>
+                                    <div ng-show="showValidationError" class="error">Ingrese CUIT y contrase&ntildea</div>
+                                    <div class="panel-body">
+                                        <button class="btn btn-primary btn-block" ng-click="doLogin()">Entrar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexchild">
+                        <div class="panel panel-new fullwidth">
+                            <div class="panel-heading">
+                                <h3 class="panel-title bold">Nuevo usuario</h3>
+                            </div>
+                            <div class="panel-body">
+                                <i class="fa fa-user-plus iconreg" aria-hidden="true"></i>
+                            </div>
+                            <div class="panel-body">
+                                <a ui-sref="app.reghead.terminos" class="btn btn-info btn-block">Registrarme</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

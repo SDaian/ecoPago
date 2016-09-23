@@ -1,0 +1,48 @@
+<div ui-view class="has-headerbar has-footerbar">
+    <div class="header">
+        <h2 class="">Nueva Venta</h2></div>
+    <div class="background">
+      <div class="loading" ng-if="isLoading">
+          <h1>Cargando...</h1>
+          <div class="loader"></div>
+      </div>
+        <div class="container">
+            <div class="row">
+                <div class="registro-content padding1">
+                    <div class="panel panel-default fullwidth nomargin marginbot1">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Complete los datos de la compra:</h3>
+                        </div>
+                        <div class="parentflex-center">
+                            <div class="flexchild-center fullwidth">
+                                <div class="panel-body width60 marginauto">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="DNI" class="control-label col-sm-3">DNI del Cliente</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="DNI" ng-model="venta.dniComprador" placeholder="Número de DNI">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="monto" class="control-label col-sm-3">Monto</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="Monto" ng-model="venta.montoTotal" placeholder="$ Monto en pesos">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="CBU" class="control-label col-sm-3">Detalle</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" ng-model="venta.descripcion" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-success btn-block width50 marginauto" ng-click="crearVenta()">Solicitar Pago</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

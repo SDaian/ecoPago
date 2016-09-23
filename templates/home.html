@@ -1,0 +1,166 @@
+<div ui-view class="has-headerbar has-footerbar">
+    <div class="header">
+        <h2 class="">Bienvenido a Ecopago!</h2></div>
+        <div class="container">
+            <div class="row margin2">
+                <div class="col-md-4 col-sm-4">
+                    <!-- nueva venta -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="x_panel tile fixed_height_320 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Nueva Venta</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <h4 class="">Solicitar pago:</h4>
+                                    <i class="fa fa-cart-plus iconvta" aria-hidden="true"></i>
+                                    <button ui-sref="app.homehead.nuevaVenta" class="btn btn-success btn-block btn-lg">Enviar Solicitud</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END nueva venta -->
+                    <!-- Accesos Rapidos -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="x_panel tile fixed_height_200 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Mi Cuenta</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <ul class="icon_button">
+                                        <li><a ui-sref="app.reghead.agregarCuenta"><i class="btn btn-primary btn-semiround square-medium fa fa-credit-card" aria-hidden="true"></i>Agregar Cuenta Bancaria</a></li>
+                                        <li><a ui-sref="app.reghead.crearPuntoVenta"><i class="btn btn-primary btn-semiround square-medium fa fa-building-o" aria-hidden="true"></i>Crear Punto de Venta</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Accesos Rapidos -->
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <!-- Sucursales -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+<!--                             <div class="x_panel tile fixed_height_260 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Buscador de Compras</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="row"></div>
+                                    <h4>Buscar por:</h4>
+                                    <form class="form-buscador">
+                                        <div class="row">
+                                            <div class="col-md-7 col-sm-7">
+                                                <div class="form-group radio">
+                                                    <label class="">
+                                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="cuit">CUIT
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="dni">DNI
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="nombre">Nombre
+                                                    </label>
+                                                    <label class="">
+                                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="factura">N° Factura
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-5">
+                                                <button type="submit" class="btn btn-default" disabled="disabled">
+                                                    <span class="fa fa-search paddingrg1" aria-hidden="true"></span>Buscar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+                            <div class="x_panel tile fixed_height_260 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Gestionar Sucursales</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <ul class="icon_button">
+                                        <li><a class="" ui-sref="app.reghead.crearVendedores"><i class="btn btn-success btn-semiround square-medium fa fa-user-plus" aria-hidden="true"></i>Crear Vendedores</a></li>
+                                        <li><a href="" ng-click="generarLoteVenta()"><i class="btn btn-primary btn-semiround square-medium fa fa fa-history" aria-hidden="true"></i>Cerrar Lote de Ventas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END sucursales -->
+                    <!-- Herramientas -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="x_panel tile fixed_height_260 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Panel de Herramientas</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <ul class="icon_list">
+                                        <li><a class="disabled"><i class="fa fa-files-o" aria-hidden="true"></i>Pagar Servicios</a></li>
+                                        <li><a class="disabled"><i class="fa fa-usd" aria-hidden="true"></i>Mis Ecopesos</a></li>
+                                        <li><a ui-sref="app.reghead.misCuentas"><i class="fa fa-credit-card" aria-hidden="true"></i>Mis Cuentas</a></li>
+                                        <li><a class="disabled"><i class="fa fa-building-o" aria-hidden="true"></i>Mis Sucursales</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END herramientas -->
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <!-- Perfil -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="x_panel tile fixed_height_320 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Mi Perfil</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <i class="fa fa-user iconperfil" aria-hidden="true"></i>
+                                    <ul class="perfil-list">
+                                        <li>Jose Perez</li>
+                                        <li>CUIT 25-29456789-6</li>
+                                        <li>+15 56958-5226</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-default btn-block">Editar Perfil</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Perfil -->
+                    <!-- Historial -->
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="x_panel tile fixed_height_200 overflow_hidden">
+                                <div class="x_title">
+                                    <h2>Historial</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="row margin1">
+                                        <div class="col-sm-4">
+                                            <i class="fa fa-line-chart iconbig" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <button type="button" class="btn btn-primary margin1" ui-sref="app.homehead.historial">Historial de</br>Ventas</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END historial --> 
+                </div>
+            </div>
+        </div>
+
+</div>

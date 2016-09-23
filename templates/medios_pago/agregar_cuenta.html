@@ -1,0 +1,57 @@
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Agregar cuenta</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Cargando...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="registro-content padding1">
+                <div class="panel panel-default fullwidth nomargin marginbot1">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Complete los datos de su cuenta para recibir pagos:</h3>
+                    </div>
+                    <div class="parentflex-center">
+                        <div class="flexchild-center fullwidth">
+                            <div class="panel-body width50 marginauto">
+                                <form class="form-horizontal" name="formAgregarCtaBancaria">
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-2">Tipo</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" ng-model="data.ctaBancaria.tipoCuenta" required>
+                                                <option value="CAJA_DE_AHORRO_PESOS">Caja de Ahorro</option>
+                                                <option value="CUENTA_CORRIENTE_PESOS" selected>Cuenta Corriente</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="direccion" class="control-label col-sm-2">Banco</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" ng-model="data.ctaBancaria.idBanco" required>
+                                                <option value="1">Banco Francés</option>
+                                                <option value="2" selected>Banco Galicia</option>
+                                                <option value="3">Santander Río</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CBU" class="control-label col-sm-2">CBU</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="CBU" ng-model="data.ctaBancaria.numero" placeholder="Número de CBU" required>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <i class="fa fa-question-circle iconcbu"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block width50 marginauto" ng-disabled="formAgregarCtaBancaria.$invalid" ng-click="agregarCtaBancaria()">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>

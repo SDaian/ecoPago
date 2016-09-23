@@ -1,0 +1,51 @@
+<div class="headerbar navbar-fixed-top">
+    <a ui-sref="app.homehead.home"><img src="/img/logo-ecopago-s.png" class="img-responsive logo" alt="Logo Ecopago"></a>
+
+    <img src="/img/phone-logo.png" class="img-responsive headicon pull-right" alt="Icono Telefono">
+</div>
+
+<div ui-view class="has-headerbar has-footerbar background-img">
+
+    <div class="header">
+        <h3>Creación de Contraseña</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Procesando...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="registro-content padding1">
+                <div class="panel panel-default fullwidth nomargin marginbot1">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cree y confirme su contraseña para validar su usuario:</h3>
+                    </div>
+                    <div class="parentflex-center">
+                        <div class="flexchild-center fullwidth">
+                            <div class="panel-body width50 marginauto">
+                                <form class="form-horizontal" name="formCrearPassword">
+                                    <div class="form-group">
+                                        <label for="loginPassword" class=" control-label col-sm-4">Contraseña</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" class="form-control" name="loginPassword" id="loginPassword" ng-model="nuevaPassword.password" placeholder="Ingrese su password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rePassword" class="control-label col-sm-4">Repetir Contraseña</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" name="rePassword" class="form-control" id="rePassword" ng-model="nuevaPassword.confPassword" placeholder="Repita su password" required pw-check>
+                                             <span ng-show="formCrearPassword.rePassword.$error.noMatch">Las contraseñas no coinciden</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <span ng-show="formCrearPassword.loginPassword.$error.required">REQUERIDO.</span> -->
+                <button class="btn btn-primary btn-block width50 marginauto" ng-click="guardarPassword()">Aceptar</button>
+                <!-- <button class="btn btn-primary btn-block width50 marginauto" ng-disabled="!formCrearPassword.$valid " ng-click="guardarPassword()">Aceptar</button>  -->
+            </div>
+        </div>
+    </div>
+</div>

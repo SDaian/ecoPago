@@ -1,0 +1,29 @@
+<div ui-view>
+    <nav class="navbar headerbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <a ui-sref="app.homehead.home">
+                    <img src="/img/logo-ecopago-s.png" class="img-responsive logo" alt="Logo Ecopago"></a>
+            </div>
+            <!--Menu colapsable-->
+            <div class="navbar-collapse collapse headernav" id="navbar">
+                <div class="parentflex-center">
+                    <div class="flexchild">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Mis datos<span class="sr-only">(current)</span></a></li>
+                            <li><a ui-sref="app.homehead.nuevaVenta"><i class="fa fa-cart-plus" aria-hidden="true"></i>Nueva venta</a></li>
+                            <li><a ui-sref="app.homehead.historial"><i class="fa fa-history" aria-hidden="true"></i>Historial</a></li>
+                            <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Ayuda</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div ui-view="contenido"></div>
+</div>

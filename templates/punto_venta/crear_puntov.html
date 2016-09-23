@@ -1,0 +1,92 @@
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Generar Punto de Venta AFIP</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Subiendo archivo...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row margin2">
+            <div class="col-sm-8">
+                <div class="panel nomargin fullwidth instructivo">
+                    <div class="panel-heading">
+                        <h3>Instructivo</h3>
+                    </div>
+                    <div class="panel-body padding2 margin1">
+                        <ol>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <button type="button" class="btn btn-default square-small btn-round"><span>1</span></button>
+                                    </div>
+                                    <div class="col-sm-11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis veniam quidem, inventore numquam. Facilis vitae, perspiciatis ab voluptatem beatae, harum, esse placeat voluptatibus quam ducimus, perferendis totam delectus iusto.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <button type="button" class="btn btn-default square-small btn-round"><span>2</span></button>
+                                    </div>
+                                    <div class="col-sm-11">Distinctio, mollitia, ducimus. Ea enim nostrum autem ullam ducimus maxime pariatur alias! Saepe porro nisi animi id, eius quibusdam sapiente aut commodi numquam deserunt, minima eveniet libero modi esse, nemo! Recusandae harum veritatis nemo commodi optio!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <button type="button" class="btn btn-default square-small btn-round"><span>3</span></button>
+                                    </div>
+                                    <div class="col-sm-11">Asperiores nobis explicabo omnis necessitatibus doloremque commodi atque incidunt nam quisquam eius optio illum, laborum adipisci sed ipsum inventore enim, ab fugiat velit rem aliquam reprehenderit? Provident doloribus, facere enim.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <button type="button" class="btn btn-default square-small btn-round"><span>4</span></button>
+                                    </div>
+                                    <div class="col-sm-11">Distinctio, mollitia, ducimus. Ea enim nostrum autem ullam ducimus maxime pariatur alias! Saepe porro nisi animi id, eius quibusdam sapiente aut commodi numquam deserunt, minima eveniet libero modi esse, nemo! Recusandae harum veritatis nemo commodi optio!</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <button type="button" class="btn btn-default square-small btn-round"><span>5</span></button>
+                                    </div>
+                                    <div class="col-sm-11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum inventore itaque, porro numquam fugiat, harum libero ipsam deserunt ducimus dolore quod error dolorem, quis corrupti repellendus voluptatem. Quasi, perspiciatis commodi.</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row marginbot1">
+                    <div class="col-sm-12">
+                        <div class="panel panel-dark nomargin fullwidth panel-afip padding1">
+                            <div class="panel-heading">
+                                <h3>Ir a AFIP</h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="http://www.afip.gob.ar/" target="blank" class="btn btn-default btn-lg active" role="button"> <img src="img/afip_logo.png" class="img-responsive" alt="Boton Afip"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel fullwidth padding1">
+                            <div class="panel-heading">
+                                <h3>Subir archivo</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p class="paddingbot1">Cargue aquí el archivo .TXT obtenido en la página de la AFIP:</p>
+                                <button type="file" ngf-select="uploadPtoVenta($file)" class="btn btn-success btn-block" accept="text/*" ngf-max-height="1000" ngf-max-size="1MB">
+                                Subir archivo<i class="fa fa-upload padding1" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Crear vendedores</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Procesando...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="registro-content padding1">
+                <div class="panel panel-default fullwidth nomargin marginbot1">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Complete los datos del vendedor para darlo de alta:</h3>
+                    </div>
+                    <div class="parentflex-center">
+                        <div class="flexchild-center fullwidth">
+                            <div class="panel-body width50 marginauto">
+                                <form class="form-horizontal" name="formCrearVendedorEmpleado">
+                                    <div class="form-group">
+                                        <label for="nombreApellido" class="control-label col-sm-2">Nombre</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="nombreApellido" ng-model="vendedorEmpleado.nombre" placeholder="Ej: Jorge">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombreApellido" class="control-label col-sm-2">Apellido</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="loginDni" ng-model="vendedorEmpleado.apellido" placeholder="Ej: Perez">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginDni" class="control-label col-sm-2">DNI</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control" id="loginDni" ng-model="vendedorEmpleado.cuit" placeholder="Numero de DNI">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="eMail" class=" control-label col-sm-2">E-Mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="eMail" ng-model="vendedorEmpleado.mail" placeholder="Correo electrónico">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reEMail" class="control-label col-sm-2">E-Mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="reEMail" ng-model="vendedorEmpleado.confirmacionmail" placeholder="Repetir correo electrónico">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-block width50 marginauto" ng-disabled="formCrearVendedorEmpleado.$invalid" ng-click="crearVendedorEmpleado()">Crear Vendedor</button>
+            </div>
+        </div>
+    </div>
+</div>

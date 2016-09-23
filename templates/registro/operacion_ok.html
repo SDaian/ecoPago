@@ -1,0 +1,22 @@
+<div class="headerbar navbar-fixed-top">
+    <a ui-sref="app.homehead.home"><img src="/img/logo-ecopago-s.png" class="img-responsive logo" alt="Logo Ecopago"></a>
+    <img src="/img/phone-logo.png" class="img-responsive headicon pull-right" alt="Icono Telefono">
+</div>
+<div ui-view class="has-headerbar has-footerbar background-img">
+    <div class="header">
+        <h3>Operación Exitosa</h3>
+    </div>
+    <div class="loading" ng-if="isLoading">
+        <h1>Procesando...</h1>
+        <div class="loader"></div>
+    </div>
+    <div class="container has-footerbar">
+        <div class="row">
+            <div class="registro-content padding2">
+                <i class="fa fa-check-circle iconbig iconsucess" aria-hidden="true"></i>
+                <p class="text-center">Felicitaciones, la operación ha terminado con éxito!
+                    <p class="text-center">Puede cerrar esta ventana.</p>
+            </div>
+        </div>
+    </div>
+</div>
